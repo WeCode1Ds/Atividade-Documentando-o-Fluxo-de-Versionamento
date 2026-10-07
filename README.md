@@ -1,4 +1,4 @@
-# 🚀 Sessão 1: O Passo a Passo da Criação e Envio
+# Sessão 1: O Passo a Passo da Criação e Envio
 
 Para colocar um projeto no GitHub, primeiro preciso criar um repositório na plataforma e depois conectar esse repositório com uma pasta do projeto que está no meu computador. Depois dessa conexão, consigo registrar as alterações usando o Git e enviar os arquivos para o GitHub.
 

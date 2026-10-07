@@ -1,8 +1,4 @@
-dir
-    # Meu Projeto GitHub
-
-Este arquivo é o README do meu projeto.
-# Sessão 1: O Passo a Passo da Criação e Envio
+# 🚀 Sessão 1: O Passo a Passo da Criação e Envio
 
 Para colocar um projeto no GitHub, primeiro preciso criar um repositório na plataforma e depois conectar esse repositório com uma pasta do projeto que está no meu computador. Depois dessa conexão, consigo registrar as alterações usando o Git e enviar os arquivos para o GitHub.
 
@@ -190,7 +186,65 @@ Isso significa que a branch `main` do meu computador ficou relacionada à branch
 
 Depois disso, pude atualizar a página do meu repositório no GitHub e verificar que o arquivo `README.md` estava disponível na nuvem.
 
-## 9. Entendendo os comandos e as letras maiúsculas e minúsculas
+## 9. Fazendo uma nova alteração e enviando novamente
+
+Depois do primeiro envio, fiz um novo teste para entender como funciona uma atualização do projeto.
+
+Primeiro, alterei o conteúdo do `README.md` pelo VS Code e salvei o arquivo utilizando:
+
+```text
+Ctrl + S
+```
+
+Depois verifiquei novamente a situação do projeto com:
+
+```bash
+git status
+```
+
+O Git identificou que o `README.md` havia sido modificado.
+
+Então adicionei a alteração novamente:
+
+```bash
+git add .
+```
+
+Depois criei um novo *commit*, dessa vez com uma mensagem indicando o que havia sido alterado:
+
+```bash
+git commit -m "Atualiza documentação da Sessão 1"
+```
+
+Por último, enviei a atualização para o GitHub utilizando:
+
+```bash
+git push
+```
+
+Nesse segundo envio, não precisei utilizar novamente `git push -u origin main`, porque anteriormente o Git já tinha configurado a relação entre a branch local `main` e a branch remota `main`.
+
+Com isso, percebi na prática que **não preciso criar outro repositório toda vez que faço uma alteração**. Posso editar os arquivos, salvar, registrar um novo commit e fazer um novo `push` para atualizar o mesmo projeto no GitHub.
+
+O fluxo de atualização que aprendi foi:
+
+```text
+Editar o arquivo
+      ↓
+Ctrl + S
+      ↓
+git status
+      ↓
+git add .
+      ↓
+git commit -m "mensagem"
+      ↓
+git push
+      ↓
+GitHub atualizado
+```
+
+## 10. Entendendo os comandos e as letras maiúsculas e minúsculas
 
 Uma coisa que também percebi durante o processo é que é importante prestar atenção na forma como os comandos e nomes dos arquivos são escritos.
 
@@ -214,7 +268,7 @@ Também é importante prestar atenção aos nomes de arquivos e pastas. Por exem
 README.md
 ```
 
-não é a mesma escrita que:
+não é necessariamente a mesma escrita que:
 
 ```text
 readme.md
@@ -224,11 +278,15 @@ Dependendo do sistema e da situação, diferenças entre letras maiúsculas e mi
 
 Também aprendi que as mensagens exibidas pelo terminal entre parênteses ou como explicações do Git **não são necessariamente comandos para serem digitados**. Por exemplo, quando o Git mostra uma mensagem explicando `git rm --cached`, aquilo é uma orientação do próprio programa e não significa que eu preciso executar aquele comando naquele momento.
 
-## 10. Resumindo o primeiro envio
+## 11. Resumindo o processo
 
 Depois da experiência prática, consegui entender o processo completo da seguinte maneira:
 
 **Criar o repositório no GitHub → criar ou abrir a pasta do projeto → criar o README.md → inicializar o Git → verificar o status → adicionar os arquivos → criar o commit → conectar ao repositório remoto → definir a branch principal → fazer o push.**
+
+Depois, para continuar atualizando o projeto:
+
+**Editar → salvar → verificar o status → adicionar → fazer commit → fazer push.**
 
 Os principais comandos utilizados foram:
 
@@ -243,4 +301,13 @@ git branch -M main
 git push -u origin main
 ```
 
-Com isso, consegui pegar um arquivo que estava no meu computador, registrar sua primeira versão usando o Git e finalmente enviá-lo para o GitHub. Essa experiência também mostrou que é importante verificar a pasta em que estou trabalhando antes de executar os comandos, principalmente o `git add .`, para evitar adicionar arquivos que não pertencem ao projeto.
+E, para as atualizações posteriores:
+
+```bash
+git status
+git add .
+git commit -m "Descrição da alteração"
+git push
+```
+
+Com isso, consegui pegar um arquivo que estava no meu computador, registrar sua primeira versão usando o Git, enviá-lo para o GitHub e depois fazer uma nova alteração e atualizar o mesmo repositório. Essa experiência também mostrou que é importante verificar a pasta em que estou trabalhando antes de executar os comandos, principalmente o `git add .`, para evitar adicionar arquivos que não pertencem ao projeto.

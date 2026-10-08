@@ -226,6 +226,22 @@ Nesse segundo envio, não precisei utilizar novamente `git push -u origin main`,
 
 Com isso, percebi na prática que **não preciso criar outro repositório toda vez que faço uma alteração**. Posso editar os arquivos, salvar, registrar um novo commit e fazer um novo `push` para atualizar o mesmo projeto no GitHub.
 
+### Por que fazer testes de commits?
+
+Eu também percebi que fazer um segundo commit durante o aprendizado é importante para entender **como funciona o controle de versões na prática**.
+
+O primeiro commit serviu para registrar a primeira versão do meu projeto. Depois, ao fazer uma alteração e criar outro commit, consegui perceber que o Git não simplesmente substitui o que existia antes. Ele mantém um **histórico das alterações realizadas**.
+
+Por isso, os testes de commits ajudam a entender:
+
+* como o Git identifica que um arquivo foi alterado;
+* como uma alteração pode ser registrada separadamente;
+* como cada commit pode receber uma mensagem explicando o que foi feito;
+* como o projeto pode ter um histórico de versões;
+* e como posso acompanhar a evolução do projeto ao longo do tempo.
+
+Na minha experiência, fazer esse segundo teste foi importante porque eu pude perceber o ciclo completo: **alterei o arquivo, salvei, verifiquei a alteração, adicionei ao Git, criei um novo commit e depois enviei para o GitHub**.
+
 O fluxo de atualização que aprendi foi:
 
 ```text
